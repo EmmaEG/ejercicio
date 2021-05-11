@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <h1 class="text-center mt-2">ARTÍCULOS</h1>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let articulo of articulos">
+      <div class="card mt-2">
+        <img
+          [src]="articulo.imagen"
+          class="card-img-top"
+          *ngIf="articulo.imagen"
+          lt="imagen"
+        />
+        <div class="card-body">
+          <h1 class="card-title">Nombre: {{articulo.nombre | slice:0:10}}</h1>
+          <p class="card-text">Descripción: {{articulo.descripcion}}</p>
+          <a [routerLink]="['/articulos', articulo.id]" class="btn btn-primary"
+            >Cambiar Nombre</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

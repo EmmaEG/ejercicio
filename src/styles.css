@@ -1,0 +1,13 @@
+/* Add application styles & imports to this file! */
+html,
+body {
+  font-family: "Muli";
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}

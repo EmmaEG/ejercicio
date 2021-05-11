@@ -1,0 +1,14 @@
+
+<div class="container">
+  <h1 class="text-center mt-2">EDITAR</h1>
+<form class="mt-2" [formGroup]="form" (ngSubmit)="saveArticulo($event)">
+       <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre del artículo</label>
+        <input placeholder="Nombre" class="form-control" formControlName="nombre" type="text">
+      </div>
+      
+      <button [disabled]="form.invalid" type="submit" class="btn btn-success">Guardar</button>
+
+      <a class="btn btn-danger ml-1" [routerLink]="['/articulos']">Caneclar</a>
+</form>
+</div>
